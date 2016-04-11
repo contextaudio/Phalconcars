@@ -1,0 +1,286 @@
+
+section {
+	&.header {
+		max-height: 80px;
+		width: 100%;
+		background-color: $header-darkgrey;
+		margin: 0px;
+	}
+	.guest {
+		background-color: $header-grey;
+		min-height: 80px;
+		display: none;
+		@include MQ(L) {
+			display: table;
+		}		
+		img {
+			max-width: 80%;
+			margin-top: 15px;
+		}
+
+	}
+	.login_info {
+		background-color: $header-grey;
+		min-height: 80px;
+		padding-top: 15px;
+		display: none;
+		@include MQ(L) {
+			display: table;
+		}
+		span {
+			display: block;
+			width: 100%;
+			float: left;
+			color: $white;
+			&.name {
+				font-size: 20px;
+			}
+			&.status {
+				font-size: 15px;
+			}
+		}
+
+	}
+	.logo{
+		width: 177px;
+		height: 52px;
+		margin-top: 25px;
+		img {
+			max-width: 80%;
+			float: right;
+		}
+	}
+}
+
+section {
+	&.page {
+		.menu {
+			background-color: $header-darkgrey;
+			min-height: 500px;
+			display: none;
+			padding: 0px;
+
+			@include MQ(L) {
+				display: table;
+			}
+			h4 {
+				letter-spacing: 3px;
+				font-weight: bold;
+				color: $white;
+				font-size: 15px;
+				width: 100%;
+				margin: 10px 20px;
+			}
+			ul.main_menu {
+				margin: 0px 0px 20px 0px;
+				width: 100%;
+				display: inline-block;
+				li{
+					list-style-type: none;
+					width: 100%;
+					a {
+						position: relative;
+						width: 100%;
+						font-size: 15px;
+						color: $menu-font;
+						padding: 5px;
+						line-height: 30px;
+						float: left;
+						border-left: 3px solid transparent;
+						span {
+							margin-left: 45px;
+							display: block;
+						}
+						&:hover {
+							background-color: #54595A;
+							border-left: 3px solid $menu-red;
+							color: $white;
+						}
+
+					}
+				}
+			}
+
+			ul.sub_menu {
+				margin: 0px!important;
+				li {
+					a {
+					   	font-size: 13px;
+						margin-left: 45px;
+						&:hover {
+							background-color: transparent;
+							color: $white;
+							border-left: 3px solid transparent;
+						}	
+					}
+				}
+			}
+			.search_wrapper {
+				width: 100%;
+				padding: 20px;
+				display: block;
+				.input_wrap {
+					background-color: #54595A;
+					height: 45px;
+					position: relative;
+					&:before {
+						position: absolute;
+						top: 10px;
+						left: 17px;
+						color: $white;
+						content: "\f18d";
+						font-size: 24px;
+						font-family: "foundation-icons";
+						font-style: normal;
+						font-weight: normal;
+						font-variant: normal;
+						text-transform: none;
+						line-height: 1;
+						-webkit-font-smoothing: antialiased;
+						display: inline-block;
+						text-decoration: inherit;
+						&:hover {
+							cursor: pointer;
+						}
+			
+					}
+
+					input {
+						margin-top: 2px;
+						border: transparent;
+						box-shadow: none;
+						padding: 15px;
+						max-width: 80%;
+						float: right;
+						background-color: transparent;
+						outline: none;
+
+					}
+				}
+
+			}			
+		}
+		.menu_icon {
+			position: absolute;
+			left: 20px;
+			top: 5px;
+			color: $menu-font;
+			font-size: 25px;
+			width: 20px;
+			height: 20px;
+		}
+		.content {
+			position: relative; 
+			padding: 0px;
+			background-color: $white;
+			.border {
+				background-color: $content-border-grey;
+				min-height: 500px;
+				&.left_b {
+					border-right: 1px solid $content-border-line;
+					display: none;
+					@include MQ(L) {
+						display: table;
+					}
+				}
+				&.right_b {
+					border-left: 1px solid $content-border-line;
+					float: right;
+					display: none;
+					@include MQ(L) {
+						border-right: 1px solid $content-border-line;
+						display: table;
+					}
+				}
+			}
+			.show_cars_wrap {
+				position: absolute;
+				padding: 30px 0px;
+				width: 100%;
+				top: 150px;
+				background-color: $content-area-grey;
+				border-top: 1px solid $content-area-line;
+				border-bottom: 1px solid $content-area-line;
+				@include MQ(L) {
+					border-right: 1px solid $content-border-line;
+				}
+				
+			}
+			.show_cars_center {
+				max-width: 75%;
+				margin: 0 auto;
+			}
+			.display_car {
+				background-color: $white;
+				width: 100%;
+				
+				@include MQ(L) {
+					width: 31%;
+					margin-bottom: 0px;
+				}				
+				float: left;
+				margin: 0 1.1%;
+				margin-bottom: 20px;
+				border-bottom: 3px solid #F5F5F5;
+				.car_info_wrap {
+					padding: 20px;
+					.car_heading {
+						letter-spacing: 1.5px;
+						color: $menu-font;
+						font-size: 15px;
+						font-weight: bold;
+					}
+					.about_txt {
+						font-size: 14px;
+						color: $car_txt_about;
+						font-weight: bold;
+					}
+					.splitter {
+						width: 100%;
+						height: 1px;
+						background-color: #F5F5F5;
+						margin: 12px 0px;
+					}
+				}
+				img {
+					max-width: 100%;
+				}
+				a {
+					color: $link;
+				}
+			}
+			span {
+				margin-bottom: 5px;
+				&.bread_crumbs {
+					font-weight: bold;
+					color: $page_title;
+					font-size: 15px;
+					display: block;
+
+				}
+				&.main_title {
+					font-size: 35px;
+					color: #000;
+					font-weight: 200;
+					display: block;
+
+				}
+				&.sub_heading {
+					color: $page_title;
+					font-size: 20px;
+					display: block;
+				}
+			}
+
+			.page_info_wrap {
+				max-width: 75%;
+				margin: 0 auto;
+				padding: 20px 0px;
+				@include MQ(L) {
+					padding: 20px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

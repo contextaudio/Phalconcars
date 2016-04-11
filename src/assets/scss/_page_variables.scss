@@ -1,0 +1,104 @@
+// - - - - - - - - - - - - - - - - - - -
+// FONT STYLES
+// - - - - - - - - - - - - - - - - - - -
+$font_raleway:'Raleway', sans-serif;
+
+// - - - - - - - - - - - - - - - - - - -
+// FONT SIZE
+// - - - - - - - - - - - - - - - - - - -
+$font_size_small: 14px;
+$font_size_base: 16px;
+$font_size_medium: 17px;
+$font_size_large: 18px;
+$font_size_xlarge: 20px;
+$font_size_xxlarge: 25px;
+$font_size_huge: 50px;
+
+// - - - - - - - - - - - - - - - - - - -
+// COLOURS
+// - - - - - - - - - - - - - - - - - - -
+
+//CONTRASTS
+$header-grey: #848484;
+$header-darkgrey: #4E4F4F;
+
+
+$content-border-grey: #F2F2F2;
+$content-border-line: #D8D8D8;
+
+$content-area-grey: #FBFBFB;
+$content-area-line: #ECECEC;
+
+$white: #FFFFFF;
+
+
+$menu-red: #FF0301;
+$menu-highlight: #54595A;
+$menu-font: #B9B9B9;
+$car_txt_about: #8A8A8A;
+$page_title: #BABABA;
+
+$link: #3ACBBA;
+$text-offblack: #4C4C4C;
+
+
+// - - - - - - - - - - - - - - - - - - -
+// BREAK POINTS
+// - - - - - - - - - - - - - - - - - - -
+$S: 320px;
+$SM: 420px;
+$SMM: 520px;
+$M: 750px;
+$LM: 960px;
+$L: 1024px;
+$X: 1300px;
+// - - - - - - - - - - - - - - - - - - -
+// MEDIA QUIERIES
+// - - - - - - - - - - - - - - - - - - -
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; }
+  }
+   @if $canvas == SM {
+   @media only screen and (min-width: $SM) { @content; }
+  }
+  @if $canvas == SMM {
+   @media only screen and (min-width: $SMM) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == LM {
+   @media only screen and (min-width: $LM) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; }
+  }
+  @else if $canvas == X {
+   @media only screen and (min-width: $X) { @content; }
+  }
+}
+// - - - - - - - - - - - - - - - - - - -
+// MIXINS
+// - - - - - - - - - - - - - - - - - - -
+@mixin scale($scale-size) {
+    -webkit-transform: scale($scale-size);
+    -moz-transform: scale($scale-size);
+    -ms-transform: scale($scale-size);
+    -o-transform: scale($scale-size);
+    transform: scale($scale-size);
+}
+@mixin filter($filter-type,$filter-amount) {
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
