@@ -1,0 +1,54 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 12, 2016 at 09:46 PM
+-- Server version: 5.5.34
+-- PHP Version: 5.5.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `phalconcars`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cars`
+--
+
+CREATE TABLE `cars` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `make` varchar(255) NOT NULL,
+  `model` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `colour` varchar(255) NOT NULL,
+  `seats` int(10) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `cars`
+--
+
+INSERT INTO `cars` (`id`, `make`, `model`, `type`, `colour`, `seats`, `image`) VALUES
+(1, 'BMW', 'Coupe', 'Convertible', 'Green', 2, 'assets/img/audi/audi-three.jpg'),
+(2, 'BMW', 'Coupe', 'Touring', 'Red', 2, 'assets/img/bmw/bwm-three.jpg'),
+(3, 'BMW', 'Roadster', 'Z4', 'yellow', 2, 'assets/img/bmw/bmw-two.jpg'),
+(4, 'Audi', 'TT', 'Hatchback', 'Black', 2, 'assets/img/audi/audi-one.jpg'),
+(5, 'Audi', 'S5', 'Convertible', 'Teal', 5, 'assets/img/alfa-romeo/alfa-three.jpg'),
+(6, 'Audi', 'A4', 'Sline', 'Red', 5, 'assets/img/alfa-romeo/alfa-four.jpg');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
